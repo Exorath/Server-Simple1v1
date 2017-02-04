@@ -1,0 +1,48 @@
+{
+  "kind": "ReplicationController",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "server-simple1v1-controller",
+    "namespace": "servers",
+    "labels": {
+      "state": "serving"
+    }
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "app": "server-simple1v1"
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "server-simple1v1"
+        }
+      },
+      "spec": {
+        "volumes": null,
+        "containers": [
+          {
+            "name": "server-simple1v1",
+            "image": "exorath/server-simple1v1",
+            "ports": [
+              {
+                "containerPort": 25565,
+                "protocol": "TCP"
+              }
+            ],
+            "env": [
+              {
+                "name": "CONNECTOR_SERVICE_ADDRESS",
+                "value": "localhost:8080"
+              }
+            ],
+            "imagePullPolicy": "IfNotPresent"
+          }
+        ],
+        "restartPolicy": "Always",
+        "dnsPolicy": "ClusterFirst"
+      }
+    }
+  }
+}
