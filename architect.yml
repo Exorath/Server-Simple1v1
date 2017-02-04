@@ -1,0 +1,18 @@
+handlers:
+  github:
+    plugins:
+      ConnectorPlugin:
+        oauth:
+          env: GITHUB_OAUTH
+        name: exorath/ConnectorPlugin
+        jar: ConnectorPlugin-(.*).jar
+  amazons3:
+    jar:
+      bucketName: exospigot
+      objectId: spigot.jar
+      accessKeyId:
+        env: AWS_ACCESS_KEY_ID
+      secretKey:
+        env: AWS_SECRET_KEY
+      region:
+        env: AWS_REGION
