@@ -1,0 +1,9 @@
+joincommands:
+  hubcmd:
+    name: Server Hub
+    cmds:
+    - hub
+    - lobby
+    - back
+    filter:
+      gameId: hubs.global
