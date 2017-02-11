@@ -11,6 +11,11 @@ handlers:
           env: GITHUB_OAUTH
         name: exorath/ExoBasePlugin
         jar: ExoBasePlugin-(.*).jar
+      Simple1v1Plugin:
+        oauth:
+          env: GITHUB_OAUTH
+        name: exorath/Simple1v1Plugin
+        jar: Simple1v1Plugin-(.*).jar
   amazons3:
     jar:
       bucketName: exospigot
