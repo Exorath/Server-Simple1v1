@@ -1,4 +1,4 @@
-# Server-Simple1v1 [![Build Status](https://travis-ci.org/Exorath/Server-Simple1v1.svg?branch=master)](https://travis-ci.org/Exorath/Server-Simple1v1) [![Docker Status](	https://img.shields.io/docker/pulls/exorath/server-simple1v1.svg](https://hub.docker.com/r/exorath/server-simple1v1/)
+# Server-Simple1v1 [![Build Status](https://travis-ci.org/Exorath/Server-Simple1v1.svg?branch=master)](https://travis-ci.org/Exorath/Server-Simple1v1)  [![Docker Status](https://img.shields.io/docker/pulls/exorath/server-simple1v1.svg](https://hub.docker.com/r/exorath/server-simple1v1/)
 A simple 1v1 Minigame server test
 
 ##Environment
