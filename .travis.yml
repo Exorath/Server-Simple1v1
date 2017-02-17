@@ -11,7 +11,7 @@ after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     version=${TRAVIS_TAG-latest} ;
-    if [ "$TRAVIS_TAG" == "" ] then
+    if [ "$TRAVIS_TAG" == "" ]; then
     version=latest;
     fi ;
     docker push "$REPO:${version}" ;
