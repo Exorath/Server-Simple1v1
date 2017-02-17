@@ -2,8 +2,7 @@
 A simple 1v1 Minigame server test
 ##Execution Environment
 | Name | Value |
-| --------- | --- |
-| AWS_REGION | EU_CENTRAL_1 |
+| CONNECTOR_SERVICE_ADDRESS	| {address of the connector service endpoint} |
 
 
 ##Building Environment
@@ -12,4 +11,4 @@ A simple 1v1 Minigame server test
 | AWS_REGION | EU_CENTRAL_1 |
 | AWS_ACCESS_KEY_ID	| {spigot.jar acces_key_id} |
 | AWS_SECRET_KEY	| {spigot.jar secret_key} |
-| CONNECTOR_SERVICE_ADDRESS	| {address of the connector service endpoint} |
+| PLAYERS_SERVICE_ADDRESS	| {PlayersService uri} |
