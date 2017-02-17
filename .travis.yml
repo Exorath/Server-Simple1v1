@@ -13,6 +13,6 @@ after_success:
     version=${TRAVIS_TAG-latest} ;
     if [ "$TRAVIS_TAG" == "" ] then
     version=latest;
-    fi
+    fi ;
     docker push "$REPO:${version}" ;
     fi
