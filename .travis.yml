@@ -16,4 +16,4 @@ after_success:
     fi ;
     echo "version ${version}" ;
     docker push "$REPO:${version}" ;
-    fi
+    fi 
