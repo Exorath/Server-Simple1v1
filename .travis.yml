@@ -7,14 +7,13 @@ before_install:
   - docker run -d -p 8080:8080 -e PORT=8080 -e AWS_REGION -e AWS_ACCESS_KEY_ID -e AWS_SECRET_KEY -e BUCKET_NAME exorath/mapservice
 script:
   - version=${TRAVIS_TAG-latest} ;
+    if [ "$TRAVIS_TAG" == "" ]; then
+    version=latest;
+    fi ;
     docker build --build-arg GITHUB_OAUTH=${GITHUB_OAUTH} --build-arg AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} --build-arg AWS_SECRET_KEY=${AWS_SECRET_KEY} --build-arg EULA=${EULA} --build-arg AWS_REGION=${AWS_REGION}  -t $REPO:${version} .
 after_success:
   - if [ -n "$TRAVIS_TAG" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    version=${TRAVIS_TAG-latest} ;
-    if [ "$TRAVIS_TAG" == "" ]; then
-    version=latest;
-    fi ;
-    echo "version ${version}" ;
-    docker push "$REPO:${version}" ;
+    echo "version $TRAVIS_TAG" ;
+    docker push "$REPO:$TRAVIS_TAG" ;
     fi 
