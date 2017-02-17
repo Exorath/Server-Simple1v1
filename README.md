@@ -2,6 +2,7 @@
 A simple 1v1 Minigame server test
 ##Execution Environment
 | Name | Value |
+| --------- | --- |
 | CONNECTOR_SERVICE_ADDRESS	| {address of the connector service endpoint} |
 
 
