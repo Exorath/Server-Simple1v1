@@ -30,7 +30,7 @@ handlers:
     maps:
       allMaps:
         type: multi
-        address: "http://$host:8080"
+        address: "http://localhost:8080"
         userId: test
         envId: prod
         prefix: toonsev.testing.1v1.
