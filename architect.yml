@@ -27,7 +27,10 @@ handlers:
       region:
         env: AWS_REGION
   mapservice:
-    address: localhost:8080
     maps:
-      envId: prod
-      prefix: toonsev.testing.1v1.
+      allMaps:
+        type: multi
+        address: localhost:8080
+        userId: test
+        envId: prod
+        prefix: toonsev.testing.1v1.
