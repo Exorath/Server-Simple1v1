@@ -26,3 +26,8 @@ handlers:
         env: AWS_SECRET_KEY
       region:
         env: AWS_REGION
+  mapservice:
+    address: localhost:8080
+    maps:
+      env: prod
+      prefix: toonsev.testing.1v1.
