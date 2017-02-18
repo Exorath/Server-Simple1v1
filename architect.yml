@@ -29,5 +29,5 @@ handlers:
   mapservice:
     address: localhost:8080
     maps:
-      env: prod
+      envId: prod
       prefix: toonsev.testing.1v1.
