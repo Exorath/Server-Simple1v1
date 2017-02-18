@@ -5,6 +5,7 @@ services:
 before_install:
   - docker pull exorath/mapservice
   - docker run -d -p localhost:8080:8080 -e PORT=8080 -e AWS_REGION -e AWS_ACCESS_KEY_ID -e AWS_SECRET_KEY -e BUCKET_NAME exorath/mapservice
+  - docker ps
 script:
   - version=${TRAVIS_TAG-latest} ;
     if [ "$TRAVIS_TAG" == "" ]; then
