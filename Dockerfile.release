@@ -1,0 +1,6 @@
+FROM maven:8
+
+COPY ./mcserver /usr/src/mcserver
+WORKDIR /usr/src/mcserver
+
+ENTRYPOINT ["startserver"]
