@@ -1,6 +1,6 @@
 FROM maven:3.3-jdk-8
 
-COPY ./mcserver /usr/src/mcserver
+COPY ./mcserver /usr/src/
 WORKDIR /usr/src/mcserver
 
 ENTRYPOINT ["startserver"]
