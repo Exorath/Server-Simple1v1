@@ -12,7 +12,6 @@ ARG EULA
 
 COPY . /usr/src/mcserver
 WORKDIR /usr/src/mcserver
-RUN ["curl", "http://$host:8080/"]
-RUN ["curl", "http://0.0.0.0:8080/", "|| :"]
+RUN ["curl", "http://0.0.0.0"]
 RUN ["curl", "http://172.17.0.0:8080/"]
 RUN serverarchitect
