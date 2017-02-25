@@ -1,4 +1,4 @@
-FROM maven:3.3-jdk-8
+FROM openjdk:8-jdk
 
 COPY ./mcserver/. /usr/src/mcserver/
 COPY ./mcserver/startserver /usr/bin/
