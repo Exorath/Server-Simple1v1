@@ -5,7 +5,7 @@ settings:
   moved-too-quickly-multiplier: 10.0
   moved-wrongly-threshold: 0.0625
   filter-creative-items: true
-  bungeecord: true
+  bungeecord: false
   late-bind: true
   sample-count: 12
   player-shuffle: 0
