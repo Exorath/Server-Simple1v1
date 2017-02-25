@@ -5,4 +5,4 @@ COPY ./mcserver/startserver /usr/bin/
 WORKDIR /usr/src/mcserver
 RUN cp startserver /usr/bin/
 RUN apt-get update && apt-get install -y --no-install-recommends tmux && rm -rf /var/lib/apt/lists/*
-ENTRYPOINT ["tmux", "new", "-s", "spigot", '"su', "-", "minecraft", "-c", "'exec", "startserver'", '"']
+ENTRYPOINT ["tmux", "new", "-s", "spigot", "su - minecraft -c 'exec startserver'"]
