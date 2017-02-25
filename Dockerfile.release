@@ -7,4 +7,4 @@ RUN cp startserver /usr/bin/
 RUN apt-get update && apt-get install -y --no-install-recommends build-essential git screen && rm -rf /var/lib/apt/lists/* && git clone https://github.com/ncopa/su-exec su-exec-raw && cd su-exec-raw && make && cp su-exec ../ && cd ../
 #RUN arch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" && wget -O gosu "https://github.com/tianon/gosu/releases/download/1.10/gosu-$arch" && chmod +x gosu
 
-ENTRYPOINT ["./su-exec", "root", "screen", "-S", "spigot", "-X" "startserver"]
+ENTRYPOINT ["./su-exec", "root", "screen", "-S", "spigot", "-X" "./startserver"]
