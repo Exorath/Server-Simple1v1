@@ -39,16 +39,16 @@ world-settings:
     arrow-despawn-rate: 1200
     zombie-aggressive-towards-villager: true
     nerf-spawner-mobs: false
-    view-distance: 16
+    view-distance: 10
     dragon-death-sound-radius: 0
     seed-village: 10387312
     seed-feature: 14357617
     max-entity-collisions: 20
     random-light-updates: false
     entity-activation-range:
-      animals: 0
-      monsters: 0
-      misc: 0
+      animals: 10
+      monsters: 10
+      misc: 10
     hunger:
       walk-exhaustion: 0.2
       sprint-exhaustion: 0.8
@@ -59,11 +59,11 @@ world-settings:
       tile: 50
       entity: 50
     entity-tracking-range:
-      players: 16
-      animals: 16
-      monsters: 16
-      misc: 16
-      other: 16
+      players: 10
+      animals: 10
+      monsters: 10
+      misc: 10
+      other: 10
     save-structure-info: false
     ticks-per:
       hopper-transfer: 8
