@@ -6,7 +6,7 @@ WORKDIR /usr/src/mcserver
 RUN cp startserver /usr/bin/
 RUN useradd -s /bin/bash -d /usr/src/mcserver/ -m minecraft && \
     apt-get update && apt-get install -y curl rsync tmux && rm -rf /var/lib/apt/lists/* && \
-    chmod -R 777 /usr/src/mcserver/
+    chmod -R +777 /usr/src/mcserver/
 #RUN getty tty -a root
 #RUN exec >/dev/tty 2>/dev/tty </dev/tty
 #ENV TERM linux
