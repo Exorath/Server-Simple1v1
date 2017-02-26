@@ -4,8 +4,9 @@ COPY ./mcserver/. /usr/src/mcserver/
 COPY ./mcserver/startserver /usr/bin/
 WORKDIR /usr/src/mcserver
 RUN cp startserver /usr/bin/
-RUN apt-get update && apt-get install -y --no-install-recommends build-essential git screen && rm -rf /var/lib/apt/lists/* && git clone https://github.com/ncopa/su-exec su-exec-raw && cd su-exec-raw && make && cp su-exec ../ && cd ../ && chmod 777 startserver && chmod 777 su-exec
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential git screen mingetty && rm -rf /var/lib/apt/lists/* && git clone https://github.com/ncopa/su-exec su-exec-raw && cd su-exec-raw && make && cp su-exec ../ && cd ../ && chmod 777 startserver && chmod 777 su-exec
 #RUN arch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" && wget -O gosu "https://github.com/tianon/gosu/releases/download/1.10/gosu-$arch" && chmod +x gosu
+RUN getty tty
 #RUN exec >/dev/tty 2>/dev/tty </dev/tty
 ENV TERM linux
 #ENTRYPOINT ["su - &&", ./su-exec", "root", "screen", "-dm", "bash", "-c", "./startserver"]
