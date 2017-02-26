@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
 #RUN arch="$(dpkg --print-architecture | awk -F- '{ print $NF }')" && wget -O gosu "https://github.com/tianon/gosu/releases/download/1.10/gosu-$arch" && chmod +x gosu
 
 #ENTRYPOINT ["su - &&", ./su-exec", "root", "screen", "-dm", "bash", "-c", "./startserver"]
-ENTRYPOINT ["screen", "-S", "spigot", "./startserver"]
+ENTRYPOINT ["screen", "-S", "-d", "-m", "spigot", "./startserver"]
