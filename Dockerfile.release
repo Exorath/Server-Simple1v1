@@ -11,4 +11,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends tmux && rm -rf 
 #RUN exec >/dev/tty 2>/dev/tty </dev/tty
 #ENV TERM linux
 #ENTRYPOINT ["su - &&", ./su-exec", "root", "screen", "-dm", "bash", "-c", "./startserver"]
-ENTRYPOINT ["script", "-c", "tmux -c ./startserver"]
+ENTRYPOINT ["script", "-c", "tmux -L spigot -c ./startserver"]
